@@ -6,6 +6,7 @@ import {Messages} from "./components/Messages";
 import { UsrNumber } from './components/UsrNumber';
 import { EnterName } from './components/EnterName';
 import { UsrNames } from './components/UsrNames';
+import { MessagesController } from './components/MessagesController';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
       <button onClick={sendMessage}> Send Message</button>
       <h1> Message:</h1>
       { messageReceived.length > 0 && <Messages messages={messageReceived}/>}
+      <MessagesController socket={socket.current}/>
     </div>
   );
 }
