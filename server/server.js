@@ -30,9 +30,10 @@ io.on("connection", (socket) => {
 
   socket.on('new-user', name => {
     users[socket.id] = name;
-    io.emit('user-connected', users);
+    // io.emit('user-connected', users);
     console.log(users);
     console.log(`User names: ${Object.values(users)}`);
+    io.emit('user-names-change', Object.values(users));
   });
 
   socket.on('disconnect', () => {
