@@ -1,17 +1,20 @@
 
 import './App.css';
 import io from "socket.io-client";
-import { useEffect, useState } from "react";
-const socket = io.connect("http://localhost:3001");
+import { useEffect, useState, useRef } from "react";
+
 
 function App() {
 
   const [message, setMessage] = useState("");
   const [messageReceived, setMessageReceived] = useState("");
-  
+  const socket = useRef(null);
+  if(socket.current === null){
+    socket.current = io.connect("http://localhost:3001");
+  }
 
   useEffect(() => {
-    socket.on("receive_message", (data) => {
+    socket.current.on("receive_message", (data) => {
       setMessageReceived(data.message);
     });
   }, [socket]);
@@ -19,7 +22,7 @@ function App() {
  
 
   const sendMessage = () => {
-    socket.emit("send_message", { message, room:1 });
+    socket.current.emit("send_message", { message, room:1 });
   };
   
   return (
