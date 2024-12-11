@@ -23,6 +23,11 @@ io.on("connection", (socket) => {
   socket.on("send_message", (data) => {
     io.emit("receive_message", data);
   });
+
+  socket.on('disconnect', () => {
+    users_number--;
+    console.log(`Number of users: ${users_number}`);
+  })
 });
 
 server.listen(3001, () => {
