@@ -2,6 +2,7 @@
 import './App.css';
 import io from "socket.io-client";
 import { useEffect, useState, useRef } from "react";
+import {Messages} from "./components/Messages";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
       <button onClick={sendMessage}> Send Message</button>
       <h1> Message:</h1>
       {messageReceived}
+      <Messages/>
     </div>
   );
 }
