@@ -7,6 +7,13 @@ import { UsrNumber } from "./UsrNumber";
 function MessagesController({socket}){
     const [messages, setMessages] = useState([]);
     const [name, setName] = useState(null);
+
+    useEffect(() => {
+        socket.on("receive_message", (data) => {
+          setMessages(prev => [...prev, data.message]);
+        });
+      }, [socket]);
+
     return (<>
     {(name === null) && <EnterName socket={socket}/>}
     <UsrNumber socket={socket} />
