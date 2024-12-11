@@ -6,7 +6,7 @@ function EnterName({socket}){
         e.preventDefault();
         if(ipt.current.value === "")
             return;
-        alert("submited");
+        socket.emit("new-user", ipt.current.value);
         return true;
     }
     return (
