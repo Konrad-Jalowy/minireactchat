@@ -9,11 +9,11 @@ function App() {
 
   
   const socket = useRef(null);
+
   if(socket.current === null){
     socket.current = io.connect("http://localhost:3001");
   }
 
-  
   return (
     <div className="App">
       <MessagesController socket={socket.current}/>
