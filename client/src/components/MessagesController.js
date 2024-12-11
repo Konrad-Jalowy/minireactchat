@@ -3,6 +3,7 @@ import { Messages } from "./Messages";
 import { EnterName } from "./EnterName";
 import { UsrNames } from "./UsrNames";
 import { UsrNumber } from "./UsrNumber";
+import { SendMessage } from "./SendMessage";
 
 function MessagesController({socket}){
     const [messages, setMessages] = useState([]);
@@ -20,6 +21,7 @@ function MessagesController({socket}){
     <UsrNumber socket={socket} />
     <UsrNames socket={socket} />
     <Messages messages={messages} />
+    {(name !== null) && <SendMessage socket={socket}/>}
     </>
     );
 };
