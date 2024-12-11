@@ -4,6 +4,7 @@ import io from "socket.io-client";
 import { useEffect, useState, useRef } from "react";
 import {Messages} from "./components/Messages";
 import { UsrNumber } from './components/UsrNumber';
+import { EnterName } from './components/EnterName';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
   
   return (
     <div className="App">
+      <EnterName socket={socket.current} />
       <UsrNumber socket={socket.current}/>
       <input
         placeholder="Message..."
