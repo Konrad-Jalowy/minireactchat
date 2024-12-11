@@ -6,7 +6,7 @@ function UsrNumber({socket}){
         socket.on("users-number-change", function(user_number){
             setUsrNum(user_number);
         });
-    }, []);
+    }, [socket]);
     return (
         <><p>Number of users: {usrNum}</p></>
     );
