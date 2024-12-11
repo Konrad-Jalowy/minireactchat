@@ -7,6 +7,7 @@ function MessagesController({socket}){
     const [name, setName] = useState(null);
     return (<>
     {(name === null) && <EnterName socket={socket}/>}
+    <Messages messages={messages} />
     </>
     );
 };
