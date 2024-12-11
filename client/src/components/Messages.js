@@ -1,5 +1,10 @@
 function Messages({messages}){
-    return <>Not implemented yet!</>
+    return (<ul>
+        {messages.map((msg) => {
+            return <li>{msg}</li>
+        })}
+
+    </ul>);
 };
 
 export {Messages};

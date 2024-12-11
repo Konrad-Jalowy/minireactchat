@@ -37,7 +37,7 @@ function App() {
       <button onClick={sendMessage}> Send Message</button>
       <h1> Message:</h1>
       {messageReceived}
-      <Messages/>
+      <Messages messages={["msg1", "msg2"]}/>
     </div>
   );
 }
