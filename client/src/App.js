@@ -3,6 +3,7 @@ import './App.css';
 import io from "socket.io-client";
 import { useEffect, useState, useRef } from "react";
 import {Messages} from "./components/Messages";
+import { UsrNumber } from './components/UsrNumber';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
   
   return (
     <div className="App">
+      <UsrNumber socket={socket.current}/>
       <input
         placeholder="Message..."
         onChange={(event) => {

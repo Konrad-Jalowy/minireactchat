@@ -19,6 +19,7 @@ io.on("connection", (socket) => {
   console.log(`User Connected: ${socket.id}`);
   users_number++;
   console.log(`Number of users: ${users_number}`);
+  io.emit("users-number-change", users_number);
 
   socket.on("send_message", (data) => {
     io.emit("receive_message", data);
@@ -27,6 +28,7 @@ io.on("connection", (socket) => {
   socket.on('disconnect', () => {
     users_number--;
     console.log(`Number of users: ${users_number}`);
+    io.emit("users-number-change", users_number);
   })
 });
 
