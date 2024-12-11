@@ -15,7 +15,8 @@ function MessagesController({socket}){
       }, [socket]);
 
     return (<>
-    {(name === null) && <EnterName socket={socket}/>}
+    {(name === null) && <EnterName socket={socket} setName={setName}/>}
+    {(name !== null) && <p>Your name: {name}</p>}
     <UsrNumber socket={socket} />
     <UsrNames socket={socket} />
     <Messages messages={messages} />

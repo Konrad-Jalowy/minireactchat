@@ -1,5 +1,5 @@
 import { useRef } from "react";
-function EnterName({socket}){
+function EnterName({socket, setName}){
     const ipt = useRef(null);
 
     function onSubmitHandler(e){
@@ -7,7 +7,7 @@ function EnterName({socket}){
         if(ipt.current.value === "")
             return;
         socket.emit("new-user", ipt.current.value);
-        return true;
+        setName(ipt.current.value);
     }
     return (
     <form onSubmit={onSubmitHandler}>

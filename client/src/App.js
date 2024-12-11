@@ -32,9 +32,6 @@ function App() {
   
   return (
     <div className="App">
-      <EnterName socket={socket.current} />
-      <UsrNumber socket={socket.current}/>
-      <UsrNames socket={socket.current} />
       <input
         placeholder="Message..."
         onChange={(event) => {
