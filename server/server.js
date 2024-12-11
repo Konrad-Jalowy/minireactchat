@@ -25,7 +25,7 @@ io.on("connection", (socket) => {
   io.emit("users-number-change", users_number);
 
   socket.on("send_message", (data) => {
-    io.emit("receive_message", {message: data, name: users[socket.id]});
+    io.emit("receive_message", {message: data, name: users[socket.id], time: new Date()});
   });
 
   socket.on('new-user', name => {
