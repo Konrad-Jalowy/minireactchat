@@ -8,7 +8,7 @@ import {Messages} from "./components/Messages";
 function App() {
 
   const [message, setMessage] = useState("");
-  const [messageReceived, setMessageReceived] = useState("");
+  const [messageReceived, setMessageReceived] = useState([]);
   const socket = useRef(null);
   if(socket.current === null){
     socket.current = io.connect("http://localhost:3001");
@@ -16,11 +16,11 @@ function App() {
 
   useEffect(() => {
     socket.current.on("receive_message", (data) => {
-      setMessageReceived(data.message);
+      setMessageReceived(prev => [...prev, data.message]);
     });
   }, [socket]);
 
- 
+  console.log(messageReceived);
 
   const sendMessage = () => {
     socket.current.emit("send_message", { message, room:1 });
@@ -36,8 +36,7 @@ function App() {
       />
       <button onClick={sendMessage}> Send Message</button>
       <h1> Message:</h1>
-      {messageReceived}
-      <Messages messages={["msg1", "msg2"]}/>
+      { messageReceived.length > 0 && <Messages messages={messageReceived}/>}
     </div>
   );
 }
