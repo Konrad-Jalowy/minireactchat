@@ -32,11 +32,14 @@ io.on("connection", (socket) => {
     users[socket.id] = name;
     io.emit('user-connected', users);
     console.log(users);
+    console.log(`User names: ${Object.values(users)}`);
   });
 
   socket.on('disconnect', () => {
     users_number--;
+    delete users[socket.id];
     console.log(`Number of users: ${users_number}`);
+    console.log(`User names: ${Object.values(users)}`);
     io.emit("users-number-change", users_number);
   })
 });
