@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 function Messages({messages}){
     return (<ul>
         {messages.map((msg) => {
