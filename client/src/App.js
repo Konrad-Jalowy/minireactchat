@@ -11,7 +11,6 @@ function App() {
   
 
   useEffect(() => {
-    socket.emit("join_room", 1);
     socket.on("receive_message", (data) => {
       setMessageReceived(data.message);
     });
