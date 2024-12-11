@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import { Messages } from "./Messages";
+import { EnterName } from "./EnterName";
 
 function MessagesController({socket}){
     const [messages, setMessages] = useState([]);
-    return (<><p>Not implemented</p></>);
+    const [name, setName] = useState(null);
+    return (<>
+    {(name === null) && <EnterName socket={socket}/>}
+    </>
+    );
 };
 
 export {MessagesController};
