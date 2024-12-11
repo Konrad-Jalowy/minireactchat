@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import {Messages} from "./components/Messages";
 import { UsrNumber } from './components/UsrNumber';
 import { EnterName } from './components/EnterName';
+import { UsrNames } from './components/UsrNames';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
     <div className="App">
       <EnterName socket={socket.current} />
       <UsrNumber socket={socket.current}/>
+      <UsrNames socket={socket.current} />
       <input
         placeholder="Message..."
         onChange={(event) => {
