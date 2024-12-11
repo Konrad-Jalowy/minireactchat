@@ -8,7 +8,7 @@ function SendMessage({socket}){
         if(iptRef.current.value === "")
             return;
         iptRef.current.value = "";
-        socket.emit("send_message", {message});
+        socket.emit("send_message", message);
       };
 
     return (

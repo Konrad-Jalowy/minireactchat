@@ -25,12 +25,11 @@ io.on("connection", (socket) => {
   io.emit("users-number-change", users_number);
 
   socket.on("send_message", (data) => {
-    io.emit("receive_message", data);
+    io.emit("receive_message", {message: data, name: users[socket.id]});
   });
 
   socket.on('new-user', name => {
     users[socket.id] = name;
-    // io.emit('user-connected', users);
     console.log(users);
     console.log(`User names: ${Object.values(users)}`);
     io.emit('user-names-change', Object.values(users));

@@ -11,9 +11,10 @@ function MessagesController({socket}){
 
     useEffect(() => {
         socket.on("receive_message", (data) => {
-          setMessages(prev => [...prev, data.message]);
+          setMessages(prev => [...prev, data]);
         });
       }, [socket]);
+      console.log(messages)
 
     let user_joined = false;
     if(name !== null){
