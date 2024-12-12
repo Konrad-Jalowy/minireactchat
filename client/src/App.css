@@ -118,4 +118,7 @@ form input[type="submit"]{
 
 .message {
   display: inline-block;
+  background-color: bisque;
+  border-radius: 5px;
+  padding: .5rem;
 }
