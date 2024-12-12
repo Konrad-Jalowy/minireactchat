@@ -15,12 +15,12 @@ function EnterName({socket, setName}){
           console.log('do validate')
         }
       }
-      
+
     return (
     <form onSubmit={onSubmitHandler}>
     <div className="form-row">
     <label htmlFor="iptName">Enter your name:</label>
-    <input ref={ipt} type="text" id="iptName" name="username"/>
+    <input ref={ipt} type="text" id="iptName" name="username" onKeyDown={handleKeyDown}/>
     </div>
     
     <input type="submit" value="enter" />
