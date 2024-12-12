@@ -43,7 +43,13 @@ h1 {
 
 .send-message button {
   padding: .5rem;
-  margin-left:5px;
+  margin-left: 5px;
+  background-color: #a855f7;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+
 }
 form {
   display: flex;
