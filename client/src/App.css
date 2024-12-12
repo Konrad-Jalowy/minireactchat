@@ -80,6 +80,7 @@ form input[type="submit"]{
   align-items: center;
   height: 120px;
   width: 1300px;
+  box-shadow: 1px 1px 8px 0px rgb(244 63 94);
 }
 
 .messages-list{
