@@ -8,3 +8,25 @@
   padding: 0;
 }
 
+
+.app-content {
+  background-color: aliceblue;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.send-message {
+  margin-top: auto;
+  background-color: aqua;
+  width: 100%;
+  display: flex;
+}
+
+.send-message input{
+  flex-basis: 300px;
+  flex-grow: 1;
+  height: 2rem;
+}
