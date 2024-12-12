@@ -12,15 +12,16 @@ function SendMessage({socket}){
       };
 
     return (
-    <><input
+    <div className="send-message">
+    <input
     ref={iptRef}
     placeholder="Message..."
     onChange={(event) => {
       setMessage(event.target.value);
     }}
     />
-  <button onClick={sendMessage}> Send Message</button>
-    </>
+    <button onClick={sendMessage}> Send Message</button>
+    </div>
     );
 };
 
