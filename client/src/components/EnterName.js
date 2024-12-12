@@ -9,6 +9,13 @@ function EnterName({socket, setName}){
         socket.emit("new-user", ipt.current.value);
         setName(ipt.current.value);
     }
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+          console.log('do validate')
+        }
+      }
+      
     return (
     <form onSubmit={onSubmitHandler}>
     <div className="form-row">
