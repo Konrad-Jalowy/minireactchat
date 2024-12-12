@@ -78,4 +78,7 @@ form input[type="submit"]{
 .messages-list{
   list-style: none;
   margin-block: 1rem;
+  background-color: gold;
+  width: 1300px;
+  flex-grow: 1;
 }
