@@ -1,6 +1,7 @@
 import { useRef } from "react";
 function EnterName({socket, setName}){
     const ipt = useRef(null);
+    const _form = useRef(null);
 
     function onSubmitHandler(e){
         e.preventDefault();
