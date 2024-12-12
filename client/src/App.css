@@ -35,3 +35,9 @@ h1 {
   flex-grow: 1;
   height: 2rem;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  min-width: 500px;
+}
