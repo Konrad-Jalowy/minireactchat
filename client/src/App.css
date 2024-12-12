@@ -25,7 +25,7 @@ h1 {
 
 .send-message {
   margin-top: auto;
-  background-color: aqua;
+  /* background-color: aqua; */
   width: 1300px;
   display: flex;
   margin-bottom: 10px;
@@ -40,6 +40,7 @@ h1 {
 
 .send-message button {
   padding: .5rem;
+  margin-left:5px;
 }
 form {
   display: flex;
