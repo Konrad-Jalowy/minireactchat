@@ -1,7 +1,6 @@
 import { useRef } from "react";
 function EnterName({socket, setName}){
     const ipt = useRef(null);
-    const _form = useRef(null);
 
     function onSubmitHandler(e){
         e.preventDefault();
@@ -13,12 +12,12 @@ function EnterName({socket, setName}){
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
-          onSubmitHandler(event)
+          onSubmitHandler(event);
         }
       }
 
     return (
-    <form onSubmit={onSubmitHandler} ref={_form}>
+    <form onSubmit={onSubmitHandler}>
     <div className="form-row">
     <label htmlFor="iptName">Enter your name:</label>
     <input ref={ipt} type="text" id="iptName" name="username" onKeyDown={handleKeyDown}/>
