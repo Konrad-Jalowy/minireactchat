@@ -24,9 +24,11 @@ function MessagesController({socket}){
     return (<div className="app-content">
     <h1>My Chat App</h1>
     {(!user_joined) && <EnterName socket={socket} setName={setName}/>}
-    {(user_joined) && <p>Your name: {name}</p>}
-    <UsrNumber socket={socket} />
-    <UsrNames socket={socket} />
+    <div className="info-group">
+        {(user_joined) && <p>Your name: {name}</p>}
+        <UsrNumber socket={socket} />
+        <UsrNames socket={socket} />
+    </div>
     <Messages messages={messages} />
     {(user_joined) && <SendMessage socket={socket}/>}
     </div>
