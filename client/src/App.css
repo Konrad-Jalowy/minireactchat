@@ -98,7 +98,7 @@ form input[type="submit"]{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
 }
 
 .time-badge {
@@ -113,6 +113,7 @@ form input[type="submit"]{
   display: inline-block;
   padding: .2rem .9rem;
   border-radius: 5px;
+  margin-inline:10px;
 }
 
 .message {
