@@ -6,7 +6,7 @@ function Messages({messages}){
             let _m = `${_time.getMinutes()}`.padStart(2, "0");
             let _s = `${_time.getSeconds()}`.padStart(2, "0");
             const formattedTime = `${_h}:${_m}:${_s}`;
-            return <li key={_time}><strong>({formattedTime}) {msg.name}</strong> says:{msg.message}</li>
+            return <li key={_time}><strong><span className="time-badge">({formattedTime})</span> {msg.name}</strong> says: <span className="message">{msg.message}</span></li>
         })}
 
     </ul>);
