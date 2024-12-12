@@ -38,6 +38,7 @@ h1 {
   flex-grow: 1;
   height: 2.3rem;
   border-radius: 5px;
+  padding: 1rem;
 }
 
 .send-message button {
