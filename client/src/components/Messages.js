@@ -1,5 +1,5 @@
 function Messages({messages}){
-    return (<ul>
+    return (<ul className="messages-list">
         {messages.map((msg) => {
             const _time = new Date(msg.time);
             let _h = `${_time.getHours()}`.padStart(2, "0");
