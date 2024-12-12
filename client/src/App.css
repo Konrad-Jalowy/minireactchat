@@ -8,6 +8,11 @@
   padding: 0;
 }
 
+h1 {
+  text-transform: uppercase;
+  margin-block: 1rem;
+  font-size: 3.5rem;
+}
 
 .app-content {
   background-color: aliceblue;
