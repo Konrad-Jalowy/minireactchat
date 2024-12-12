@@ -13,12 +13,12 @@ function EnterName({socket, setName}){
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
-          console.log('do validate')
+          onSubmitHandler(event)
         }
       }
 
     return (
-    <form onSubmit={onSubmitHandler}>
+    <form onSubmit={onSubmitHandler} ref={_form}>
     <div className="form-row">
     <label htmlFor="iptName">Enter your name:</label>
     <input ref={ipt} type="text" id="iptName" name="username" onKeyDown={handleKeyDown}/>
