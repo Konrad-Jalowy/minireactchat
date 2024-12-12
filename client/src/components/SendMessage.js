@@ -11,9 +11,16 @@ function SendMessage({socket}){
         socket.emit("send_message", message);
       };
 
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+          sendMessage();
+        }
+      }
+
     return (
     <div className="send-message">
     <input
+    onKeyDown={handleKeyDown}
     ref={iptRef}
     placeholder="Message..."
     onChange={(event) => {
