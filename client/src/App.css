@@ -35,6 +35,11 @@ h1 {
   flex-basis: 300px;
   flex-grow: 1;
   height: 2rem;
+  border-radius: 5px;
+}
+
+.send-message button {
+  padding: .5rem;
 }
 form {
   display: flex;
