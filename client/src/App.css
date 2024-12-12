@@ -26,8 +26,9 @@ h1 {
 .send-message {
   margin-top: auto;
   background-color: aqua;
-  width: 100%;
+  width: 1300px;
   display: flex;
+  margin-bottom: 10px;
 }
 
 .send-message input{
