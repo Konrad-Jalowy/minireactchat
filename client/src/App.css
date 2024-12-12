@@ -93,9 +93,12 @@ form input[type="submit"]{
 }
 
 .messages-list li {
-  margin-block: .5rem;
+  margin-block: .8rem;
 }
 
 .time-badge {
   background-color: blueviolet;
+  padding: .5rem;
+  display: inline-block;
+  border-radius: 5px;
 }
