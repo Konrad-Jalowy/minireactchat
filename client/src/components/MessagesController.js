@@ -21,14 +21,14 @@ function MessagesController({socket}){
         user_joined = true;
     }
 
-    return (<>
+    return (<div className="app-content">
     {(!user_joined) && <EnterName socket={socket} setName={setName}/>}
     {(user_joined) && <p>Your name: {name}</p>}
     <UsrNumber socket={socket} />
     <UsrNames socket={socket} />
     <Messages messages={messages} />
     {(user_joined) && <SendMessage socket={socket}/>}
-    </>
+    </div>
     );
 };
 
