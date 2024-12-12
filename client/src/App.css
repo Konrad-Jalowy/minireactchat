@@ -12,6 +12,7 @@ h1 {
   text-transform: uppercase;
   margin-block: 1rem;
   font-size: 3.5rem;
+  text-shadow: 1px 1px 3px rgb(240 171 252);
 }
 
 .app-content {
