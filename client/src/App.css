@@ -71,6 +71,7 @@ form {
 .form-row input {
   flex-grow: 1;
   margin-left: 5px;
+  padding: .3rem;
 }
 
 form input[type="submit"]{
