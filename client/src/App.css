@@ -44,3 +44,13 @@ form {
   padding: 1rem;
   border-radius: 5px;
 }
+
+.form-row {
+  background-color: aqua;
+  display: flex;
+}
+
+.form-row input {
+  flex-grow: 1;
+  margin-left: 5px;
+}
