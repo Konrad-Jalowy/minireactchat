@@ -54,3 +54,11 @@ form {
   flex-grow: 1;
   margin-left: 5px;
 }
+
+form input[type="submit"]{
+  align-self: center;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
