@@ -22,6 +22,7 @@ function MessagesController({socket}){
     }
 
     return (<div className="app-content">
+    <h1>My Chat App</h1>
     {(!user_joined) && <EnterName socket={socket} setName={setName}/>}
     {(user_joined) && <p>Your name: {name}</p>}
     <UsrNumber socket={socket} />
